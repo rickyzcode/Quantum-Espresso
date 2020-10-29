@@ -1,0 +1,59 @@
+BEGIN
+BEGIN_PATH_INPUT
+&PATH
+ string_method = 'neb'
+ nstep_path = 150
+ num_of_images = 7 ! good to use an odd number
+/
+END_PATH_INPUT
+BEGIN_ENGINE_INPUT
+&CONTROL
+ prefix='he_in_ge'
+ outdir='./outdir'
+ pseudo_dir = '/home/cmp-physics/quantum_espresso/potentials/SSSP_efficiency_pseudos/'
+/
+
+&SYSTEM
+ ibrav=1
+ A=5.49783,
+ nat=9, ntyp=2,
+ ecutwfc=30.0 ! start low because takes a long time to run
+/
+&ELECTRONS
+/
+&IONS
+/
+ATOMIC_SPECIES
+He 4.003 He_ONCV_PBE-1.0.oncvpsp.upf
+Si 28.0855 Si.pbe-n-rrkjus_psl.1.0.0.UPF
+
+K_POINTS automatic
+3 3 3 0 0 0 ! start low because takes a long time to run
+BEGIN_POSITIONS
+FIRST_IMAGE
+ATOMIC_POSITIONS crystal
+Si           -0.0028715075       -0.0028715075        0.0028715075
+Si            0.2500000000        0.2500000000        0.2500000000
+Si            0.5028715075        0.5028715075        0.0028715075
+Si            0.7500000000        0.7500000000        0.2500000000
+Si            0.5028715075       -0.0028715075        0.4971284925
+Si            0.7500000000        0.2500000000        0.7500000000
+Si           -0.0028715075        0.5028715075        0.4971284925
+Si            0.2500000000        0.7500000000        0.7500000000
+He            0.2500000000        0.2500000000        0.7500000000
+
+LAST_IMAGE
+ATOMIC_POSITIONS crystal
+Si           -0.0028714448        0.0028714448       -0.0028714448
+Si            0.2500000000        0.2500000000        0.2500000000
+Si            0.5028714448        0.4971285552       -0.0028714448
+Si            0.7500000000        0.7500000000        0.2500000000
+Si            0.5028714448        0.0028714448        0.5028714448
+Si            0.7500000000        0.2500000000        0.7500000000
+Si           -0.0028714448        0.4971285552        0.5028714448
+Si            0.2500000000        0.7500000000        0.7500000000
+He            0.2500000000        0.7500000000        0.2500000000
+
+END_POSITIONS
+END_ENGINE_INPUT
+END

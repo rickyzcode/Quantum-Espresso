@@ -1,0 +1,33 @@
+&CONTROL
+ calculation = 'vc-relax'
+ prefix='c'
+ outdir='./outdir'
+ pseudo_dir = '/home/cmp-physics/quantum_espresso/potentials/SSSP_efficiency_pseudos/'
+/
+
+&SYSTEM
+ ibrav=2,
+ A=5.0,
+ nat=2, ntyp=1,
+ nbnd=32,
+ ecutwfc=50.0
+/
+
+&ELECTRONS
+/
+
+&IONS
+/
+
+&CELL
+/
+
+ATOMIC_SPECIES
+Ge 72.64 ge_pbe_v1.4.uspp.F.UPF
+
+ATOMIC_POSITIONS (crystal)
+Ge 0.00 0.00 0.00
+Ge 0.75 0.75 0.75
+
+K_POINTS automatic
+ 17 17 17 0 0 0

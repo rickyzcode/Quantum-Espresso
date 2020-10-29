@@ -1,0 +1,8 @@
+&DOS
+ prefix='c'
+ outdir='./outdir'
+ fildos='c.dos.dat' ! DOS data file
+ Emin=-20.0 ! minimum energy (eV)
+ Emax=40.0 ! maxiumum energy (eV)
+ DeltaE=0.1 ! energy spacing (eV)
+/

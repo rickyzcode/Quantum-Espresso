@@ -1,0 +1,33 @@
+&CONTROL
+ calculation = 'scf'
+ prefix='c'
+ outdir='./outdir'
+ pseudo_dir = '/home/cmp-physics/quantum_espresso/potentials/SSSP_efficiency_pseudos/'
+/
+
+&SYSTEM
+ ibrav=2,
+ A=2.52057,
+ nat=2, ntyp=1,
+ occupations='smearing', smearing='gaussian', degauss=0.01,
+ ecutwfc=50.0
+/
+
+&ELECTRONS
+/
+
+&IONS
+/
+
+&CELL
+/
+
+ATOMIC_SPECIES
+C 12.0107 C.pbe-n-kjpaw_psl.1.0.0.UPF
+
+ATOMIC_POSITIONS (crystal)
+C 0.00 0.00 0.00
+C 0.75 0.75 0.75
+
+K_POINTS automatic
+ X X X 0 0 0

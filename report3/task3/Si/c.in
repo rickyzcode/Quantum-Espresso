@@ -1,0 +1,33 @@
+&CONTROL
+ calculation = 'vc-relax'
+ prefix='Si'
+ outdir='./outdir'
+ pseudo_dir = '/home/cmp-physics/quantum_espresso/potentials/SSSP_efficiency_pseudos/'
+/
+
+&SYSTEM
+ ibrav=2,
+ A=8.0,
+ nat=2, ntyp=1,
+ occupations='smearing', smearing='gaussian', degauss=0.01,
+ ecutwfc=50.0
+/
+
+&ELECTRONS
+/
+
+&IONS
+/
+
+&CELL
+/
+
+ATOMIC_SPECIES
+Si 28.0855 Si.pbe-n-rrkjus_psl.1.0.0.UPF
+
+ATOMIC_POSITIONS (crystal)
+Si 0.00 0.00 0.00
+Si 0.75 0.75 0.75
+
+K_POINTS automatic
+ 28 28 28 0 0 0
