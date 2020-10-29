@@ -1,0 +1,15 @@
+N=50
+
+#loop 0                                                                                                                                                                                                                                                                       
+for((s=1;s<=N;s+=1))
+do
+S=$(printf "%02d" $s)
+
+cd $S
+
+grep ! 1d.out
+
+echo $S
+cd ..
+
+done

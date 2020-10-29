@@ -1,0 +1,6 @@
+infinit.bands.dat ! (output from step 4 ¨C bands post-processing)
+-25 10 ! minimum and maximum of energy
+infinit.bands.xmgr
+infinit.bands.ps ! output plot postscript file
+-2.76 ! Fermi energy (for dashed line on plot)
+5 -2.76 ! axis label spacing and zero offset (put Fermi E at zero)

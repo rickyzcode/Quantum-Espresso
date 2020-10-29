@@ -1,0 +1,30 @@
+&CONTROL
+ calculation = 'vc-relax'
+ pseudo_dir = '/home/cmp-physics/quantum_espresso/potentials/SSSP_efficiency_pseudos/'
+/
+
+&SYSTEM
+ ibrav=1,
+ A=3,
+ nat=1, ntyp=1,
+ occupations='smearing', smearing='gaussian', degauss=0.01,
+ ecutwfc=50.0
+/
+
+&ELECTRONS
+/
+
+&IONS
+/
+
+&CELL
+/
+
+ATOMIC_SPECIES
+Li 6.941 li_pbe_v1.4.uspp.F.UPF
+
+ATOMIC_POSITIONS (crystal)
+Li    0.000  0.000  0.000
+
+K_POINTS automatic
+ 15 15 15 0 0 0

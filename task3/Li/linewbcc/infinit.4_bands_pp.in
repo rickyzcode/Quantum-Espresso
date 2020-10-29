@@ -1,0 +1,5 @@
+&bands
+prefix='infinitene'
+outdir='./outdir'
+filband='infinitene.bands.dat'
+/
