@@ -1,0 +1,66 @@
+BEGIN
+BEGIN_PATH_INPUT
+&PATH
+ string_method = 'neb'
+ restart_mode = 'restart'
+ nstep_path = 150
+ num_of_images = 7
+/
+
+END_PATH_INPUT
+
+BEGIN_ENGINE_INPUT
+&CONTROL
+ prefix='he_in_ge'
+ outdir='./outdir'
+ pseudo_dir = '/home/cmp-physics/quantum_espresso/potentials/SSSP_efficiency_pseudos/'
+/
+
+&SYSTEM
+ ibrav=1
+ A=5.36498,
+ nat=9, ntyp=2,
+ ecutwfc=30.0
+/
+
+&ELECTRONS
+/
+
+&IONS
+/
+
+ATOMIC_SPECIES
+He 4.003 He_ONCV_PBE-1.0.oncvpsp.upf
+Ge 72.63 ge_pbe_v1.4.uspp.F.UPF
+
+K_POINTS automatic
+3 3 3 0 0 0 
+
+BEGIN_POSITIONS
+FIRST_IMAGE
+ATOMIC_POSITIONS crystal
+Ge           -0.0028406529       -0.0028406529        0.0028406529
+Ge            0.2500000000        0.2500000000        0.2500000000
+Ge            0.5028406529        0.5028406529        0.0028406529
+Ge            0.7500000000        0.7500000000        0.2500000000
+Ge            0.5028406529       -0.0028406529        0.4971593471
+Ge            0.7500000000        0.2500000000        0.7500000000
+Ge           -0.0028406529        0.5028406529        0.4971593471
+Ge            0.2500000000        0.7500000000        0.7500000000
+He            0.2500000000        0.2500000000        0.7500000000
+
+LAST_IMAGE
+ATOMIC_POSITIONS crystal
+Ge           -0.0028405893        0.0028405893       -0.0028405893
+Ge            0.2500000000        0.2500000000        0.2500000000
+Ge            0.5028405893        0.4971594107       -0.0028405893
+Ge            0.7500000000        0.7500000000        0.2500000000
+Ge            0.5028405893        0.0028405893        0.5028405893
+Ge            0.7500000000        0.2500000000        0.7500000000
+Ge           -0.0028405893        0.4971594107        0.5028405893
+Ge            0.2500000000        0.7500000000        0.7500000000
+He            0.2500000000        0.7500000000        0.2500000000
+
+END_POSITIONS
+END_ENGINE_INPUT
+END
