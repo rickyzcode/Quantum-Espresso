@@ -1,0 +1,40 @@
+&CONTROL
+ calculation = 'relax'
+ prefix='ws2'
+ outdir='./outdir'
+ pseudo_dir = '/home/cmp-physics/quantum_espresso/potentials/SSSP_efficiency_pseudos/'
+/
+
+&SYSTEM
+ ibrav=0,
+ nat=3, ntyp=2,
+ occupations='smearing', smearing='gaussian', degauss=0.01,
+ vdw_corr='DFT-D3'
+ ecutwfc=30.0
+/
+
+&ELECTRONS
+/
+
+&IONS
+/
+
+&CELL
+/
+
+ATOMIC_SPECIES
+ H 2.0141 H.pbe-rrkjus_psl.1.0.0.UPF
+ O 15.999 O.pbe-n-kjpaw_psl.0.1.UPF
+ 
+ATOMIC_POSITIONS (angstrom)
+H 2.49182 6.87031 12.93333   
+H 3.78515 6.1866 12.32597   
+O 2.81515 6.1866 12.32597   
+
+CELL_PARAMETERS (angstrom)
+ 15.95363   0.00000   0.00000
+ -7.97685  13.81622   0.00000
+  0.00000   0.00000  29.99996
+
+K_POINTS automatic
+ 1 1 1 0 0 0
