@@ -1,0 +1,5 @@
+&bands
+prefix='ws2'
+outdir='./outdir'
+filband='ws2.bands.dat'
+/

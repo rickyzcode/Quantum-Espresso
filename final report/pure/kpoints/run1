@@ -1,0 +1,19 @@
+N=30
+
+#loop 0                                                                                                                                                                                                                                                                       
+for((s=1;s<=N;s+=1))
+do
+S=$(printf "%02d" $s)
+
+cp -r INI $S
+cd $S
+
+
+sed -i 's/X/'$s'/' WS2_scf.in
+sed -i 's/X/'$s'/' WS2_scf.in
+
+sbatch runQE.sh
+echo $S
+cd ..
+
+done

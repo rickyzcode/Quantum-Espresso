@@ -1,0 +1,46 @@
+&control
+  calculation='bands',
+  prefix='ws2',
+  wf_collect = .true. ,
+  pseudo_dir = '/home/cmp-physics/quantum_espresso/potentials/SSSP_efficiency_pseudos/'
+  outdir='./outdir',
+  etot_conv_thr=1.0d-6,
+  forc_conv_thr=1.0d-5,
+/
+
+&system
+  ibrav= 0,
+  nat= 3, ntyp= 2,
+  occupations='smearing', smearing='gaussian', degauss=0.01,
+  ecutwfc=50.0, ecutrho=160.0
+/
+
+&electrons
+  conv_thr =  1.0d-8,
+  mixing_beta = 0.7
+/
+
+&ions
+  ion_dynamics='bfgs',
+/
+
+ATOMIC_SPECIES
+ W 183.84  W_pbe_v1.2.uspp.F.UPF
+ S  32.065 s_pbe_v1.4.uspp.F.UPF
+
+ATOMIC_POSITIONS (angstrom)
+W            -0.1768068598        2.0298906774        8.2272852501
+S             1.4185387434        1.1088010545        6.6558554505
+S             1.4185281164        1.1087982681        9.7986692993
+
+CELL_PARAMETERS (angstrom)
+  3.19073   0.00000   0.00000
+ -1.59537   2.76325   0.00000
+  0.00000   0.00000  16.900
+
+K_POINTS crystal_b
+4
+0.000 0.000 0.000 100 ! G
+0.333333 0.333333 0.0 100 ! K
+0.500 0.000 0.000 100 ! M
+0.000 0.000 0.000 100 ! G

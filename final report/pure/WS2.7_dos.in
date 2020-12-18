@@ -1,0 +1,8 @@
+&DOS
+ prefix='ws2'
+ outdir='./outdir'
+ fildos='ws2.dos.dat' ! DOS data file
+ Emin=-25.0 ! minimum energy (eV)
+ Emax=10.0 ! maxiumum energy (eV)
+ DeltaE=0.1 ! energy spacing (eV)
+/
